@@ -1,0 +1,1 @@
+# kopie-stranky-s-hry
