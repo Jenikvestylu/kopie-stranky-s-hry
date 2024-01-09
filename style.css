@@ -1,0 +1,84 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://st5.depositphotos.com/31662992/63282/i/450/depositphotos_632823170-stock-photo-generative-ai-illustration-of-gaming.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff; 
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+
+#games {
+    margin: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.game {
+    cursor: pointer;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 200px; /* Určete vhodnou šířku dle potřeby */
+    position: relative;
+    overflow: hidden;
+}
+
+.game img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    transition: filter 0.3s ease-in-out;
+}
+
+.game p {
+    margin: 10px 0 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.game:hover img {
+    filter: blur(5px);
+}
+
+.game:hover p {
+    opacity: 1;
+    font-size: 18px; 
+    color: #ff0000; 
+    font-weight: bold; 
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.game:hover .overlay {
+    opacity: 1;
+}
